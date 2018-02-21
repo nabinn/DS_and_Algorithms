@@ -36,5 +36,5 @@ if __name__ == '__main__':
 
 	for dec_num in [1,9,5, 7, 10, 16, 32]:
 		for base in [2,8,16]:
-			print(f"decimal: {dec_num} => {bases[base]}:", end=" ")
-			print(f"{divide_by_base(dec_num, base)}")
+			converted_num = divide_by_base(dec_num, base)
+			print(f"decimal: {dec_num} => {bases[base]}:{converted_num}")
