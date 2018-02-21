@@ -34,7 +34,7 @@ if __name__ == '__main__':
 		8: "octal"
 	}
 
-	for dec_num in [1,9,5, 7, 10, 16, 25]:
+	for dec_num in [1,9,5, 7, 10, 16, 25, 256]:
 		for base in [2,8,16]:
 			converted_num = divide_by_base(dec_num, base)
 			print(f"decimal: {dec_num} => {bases[base]}:{converted_num}")
