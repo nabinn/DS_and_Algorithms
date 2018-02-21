@@ -2,7 +2,7 @@ class Stack:
 	"""
 	Stack implementation using list.
 	The end of the list is considered top.
-	For all the operations below: O(1)
+	All operations listed below are O(1)
 	"""
 	def __init__(self):
 		self.items = []
