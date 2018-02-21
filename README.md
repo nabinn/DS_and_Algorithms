@@ -1,2 +1,2 @@
-# DataStructure-Algorithms
-Exploring data structures and algorithms
+# DS and Algorithms
+Exploring data structures and algorithms in Python.
