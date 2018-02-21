@@ -1,14 +1,14 @@
 class Stack:
     """
-    Stack implementation using list.
-    The end of the list is considered top.
-    All operations listed below are O(1)
+        Stack implementation using list.
+        The end of the list is considered top.
+        All operations listed below are O(1)
     """
 
     def __init__(self):
         self.items = []
 
-    def isEmpty(self):
+    def is_empty(self):
         return self.items == []
 
     def push(self, item):
@@ -26,14 +26,14 @@ class Stack:
 
 if __name__ == '__main__':
     s = Stack()
-    print(s.isEmpty())
-    s.push(4)
-    s.push('dog')
+    print(s.is_empty())
+    s.push(6)
+    s.push('test_str')
     print(s.peek())
     s.push(True)
     print(s.size())
-    print(s.isEmpty())
-    s.push(8.4)
+    print(s.is_empty())
+    s.push(5.5)
     print(s.pop())
     print(s.pop())
     print(s.size())
