@@ -10,5 +10,5 @@ The stack operations are given below.
 - isEmpty() tests to see whether the stack is empty. It needs no parameters and returns a boolean value.
 - size() returns the number of items on the stack. It needs no parameters and returns an integer.
 
-### References:
+### Reference:
 http://interactivepython.org/runestone/static/pythonds/BasicDS/TheStackAbstractDataType.html
