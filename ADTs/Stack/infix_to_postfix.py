@@ -10,7 +10,7 @@ def infix_to_postfix(infix_expression):
 
     Assume the infix expression is a string of tokens delimited by spaces.
     The operator tokens are *, /, +, and -, along with the left and right
-    parentheses, ( and ). The operand tokens are the single-character
+    parentheses, ( and ). The operand tokens are integers or single-character
     identifiers A, B, C, and so on.
 
     The following steps will produce a string of tokens in postfix order.
@@ -28,7 +28,8 @@ def infix_to_postfix(infix_expression):
     4.When the input expression has been completely processed, check the opstack.
     Any operators still on the stack can be removed and appended to the end of the output list.
     """
-    operands = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    operands = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    operands += operands.lower()  # all alphabets are operands
     # operator precedence mapping
     operators = {
         "(": 1,
@@ -41,10 +42,10 @@ def infix_to_postfix(infix_expression):
     }
     opstack = Stack()
     postfix_list = []
-    infix_list = infix_expression.upper().split()
+    infix_list = infix_expression.split()
 
     for token in infix_list:
-        if token in operands:
+        if token in operands or token.isnumeric():
             postfix_list.append(token)
 
         elif token == "(":
@@ -71,6 +72,8 @@ def infix_to_postfix(infix_expression):
 
 
 if __name__ == "__main__":
+    print(infix_to_postfix("5 * 3 ^ ( 4 - 2 ) "))  # 5 3 4 2 - ^ *
+    print(infix_to_postfix("10 + 3 * 5 / ( 16 - 4 )"))  # 10 3 5 * 16 4 - / +
     print(infix_to_postfix("( A + B ) * C - D"))  # A B + C * D -
     print(infix_to_postfix("A * B + C * D"))  # A B * C D * +
     print(infix_to_postfix("( A + B ) * C - ( D - E ) * ( F + G )"))
