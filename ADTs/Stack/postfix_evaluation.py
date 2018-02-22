@@ -18,7 +18,7 @@ def postfix_eval(postfix_expr):
     :param postfix_expr: String in postfix format
     :return: result of evaluation
     Assume the postfix expression is a string of tokens delimited by spaces.
-    The operators are *, /, +, and - and the operands are assumed to be single-digit
+    The operators are *, /, +, and - and the operands are assumed to be integers.
     integer values. The output will be an integer result.
 
     1.Create an empty stack called operandStack.
@@ -35,10 +35,9 @@ def postfix_eval(postfix_expr):
     """
     operand_stack = Stack()
     postfix_list = postfix_expr.split()
-    operands = "0123456789"
-    operators = "+-*/"
+    operators = "+-*/%^"
     for token in postfix_list:
-        if token in operands:
+        if token.isnumeric():
             operand_stack.push(int(token))
 
         elif token in operators:
@@ -54,3 +53,4 @@ def postfix_eval(postfix_expr):
 if __name__ == "__main__":
 
     print(postfix_eval('7 8 + 3 2 + /'))  # 3.0
+    print(postfix_eval('17 10 + 3 * 9 /'))  # 9.0
