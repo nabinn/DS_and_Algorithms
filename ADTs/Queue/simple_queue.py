@@ -1,4 +1,4 @@
-class Queue():
+class Queue:
     """Simple queue implementation using python list.
     Assuming rear is at index 0 and front is at the last 
     index of the list. Hence, in this implementation,
