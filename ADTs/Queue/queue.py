@@ -1,7 +1,7 @@
 class Queue():
     """Simple queue implementation using python list.
-    Assuming rear is at position 0 of the list and front
-    is at the last position. Hence, in this implementation,
+    Assuming rear is at index 0 and front is at the last 
+    index of the list. Hence, in this implementation,
     enqueue is O(n) and dequeue is O(1).
     """
 
