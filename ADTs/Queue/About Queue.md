@@ -1,8 +1,8 @@
 ## Queue
 A queue is structured as an ordered collection of items which are 
-added at one end, called the “rear,” and removed from the other 
-end, called the “front.” 
-Queues maintain a FIFO ordering property. 
+added at one end, called the **rear**, and removed from the other 
+end, called the **front**. 
+Queues maintain a **FIFO** ordering property. 
 The queue operations are given below.
 
 - **Queue()** creates a new queue that is empty. It needs no parameters and returns an empty queue.
