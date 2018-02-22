@@ -57,6 +57,11 @@ class Printer:
 
 
 def new_print_task():
+    """Decides whether a new printing task has been created.
+    Print tasks arrive once every 180 seconds. So the random
+    event can be simulated by arbitrarily choosing 180 from
+    a range of random integers.
+    """
     num = random.randrange(1, 181)
     return num == 180
 
