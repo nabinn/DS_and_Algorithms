@@ -94,7 +94,39 @@ class LinkedList:
         return item_index-1
 
     def pop(self, pos=None):
-        pass
+        """pops the item from the list
+        If index is provided, item is popped from that
+        index, otherwise the last item is popped.
+        Assumes there is at least one element on the list.
+        """
+        previous = None
+        current = self.head
+
+        # if there is only one item and position is 0 or not provided
+        if current.get_next() is None and (pos is None or pos == 0):
+            return_value = current.get_data()
+            self.head = None
+        # if list has more than one element and head has to be removed.
+        elif pos == 0:
+            return_value = current.get_data()
+            self.head = current.get_next()
+        else:
+            index_reached = False
+            current_idx = 0
+            while not index_reached:
+                previous = current
+                current = current.get_next()
+                current_idx += 1
+                if current_idx == pos or current.get_next() is None:
+                    index_reached = True
+
+            return_value = current.get_data()
+            if current.get_next() is None:
+                previous.set_next(None)
+            else:
+                previous.set_next(current.get_next())
+
+        return return_value
 
     def __str__(self):
         """provides custom string representation of the list"""
@@ -114,14 +146,9 @@ if __name__ == "__main__":
     my_list.add(93)
     my_list.add(26)
     my_list.add(54)
-    # print(my_list)
-    my_list.remove(93)
-    # print(my_list)
+    my_list.add(95)
     my_list.remove(31)
-    # print(my_list)
     my_list.add(99)
-    # print(my_list)
-    my_list.remove(99)
     # print(my_list)
     # print(my_list.index(54))
     # print("size =", my_list.size())
@@ -130,8 +157,8 @@ if __name__ == "__main__":
     print(my_list.pop())
     print(my_list)
     print(my_list.pop(0))
+    print(my_list.pop(3))
     print(my_list.pop(1))
-    print(my_list.pop(1))
-    print(my_list.pop())
+    print(my_list.pop(3))
     print(my_list)
 
