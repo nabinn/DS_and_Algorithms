@@ -22,15 +22,20 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def is_empty(self):
-        return self.head is None
+        return self.head is None and self.tail is None
 
     def add(self, item):
         """adds a new data to the head of the list """
         new_node = Node(item)  # create node with the data
-        new_node.set_next(self.head)  # point its next to the current head
-        self.head = new_node  # set the node as the head
+        if self.is_empty():
+            self.head = new_node
+            self.tail = new_node
+        else:
+            new_node.set_next(self.head)  # point its next to the current head
+            self.head = new_node  # set the node as the head
 
     def size(self):
         current_node = self.head
@@ -67,15 +72,18 @@ class LinkedList:
         # if there was only one node
         if previous is None:
             self.head = current.get_next()
+            self.tail = current.get_next()
+        elif current.get_data() == self.tail.get_data():
+            previous.set_next(None)
+            self.tail = previous
         else:
             previous.set_next(current.get_next())
 
     def append(self, item):
         """appends item to the end of the node"""
-        current = self.head
-        while current.get_next() is not None:
-            current = current.get_next()
-        current.set_next(Node(item))
+        new_node = Node(item)
+        self.tail.set_next(new_node)
+        self.tail = new_node
 
     def index(self, item):
         """returns the index of item in the list
@@ -91,7 +99,7 @@ class LinkedList:
                 found = True
             else:
                 current = current.get_next()
-        return item_index-1
+        return item_index - 1
 
     def pop(self, pos=None):
         """pops the item from the list
@@ -167,10 +175,11 @@ if __name__ == "__main__":
         my_list.add(item)
 
     my_list.remove(31)
-    my_list.add(99)
+
     # print(my_list)
     # print(my_list.index(54))
     # print("size =", my_list.size())
+    my_list.add(99)
     my_list.append(100)
     print(my_list)
     print(my_list.pop())
@@ -182,4 +191,3 @@ if __name__ == "__main__":
     print(my_list)
     my_list.insert(2, 100)
     print(my_list)
-
