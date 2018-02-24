@@ -117,16 +117,39 @@ class LinkedList:
                 previous = current
                 current = current.get_next()
                 current_idx += 1
+                # if "pos" index or the end of the list is reached
                 if current_idx == pos or current.get_next() is None:
                     index_reached = True
 
             return_value = current.get_data()
-            if current.get_next() is None:
-                previous.set_next(None)
-            else:
-                previous.set_next(current.get_next())
+            previous.set_next(current.get_next()
+                              if current.get_next() is not None
+                              else None)
 
         return return_value
+
+    def insert(self, pos, item):
+        """ Inserts item at position pos
+        Assumes pos is a valid index
+        """
+        # if pos is zero add to head
+        if pos == 0:
+            self.add(item)
+        else:
+            previous = None
+            current = self.head
+            current_idx = 0
+            index_reached = False
+            while not index_reached:
+                previous = current
+                current = current.get_next()
+                current_idx += 1
+                if current_idx == pos:
+                    index_reached = True
+
+            new_node = Node(item)
+            new_node.set_next(current)
+            previous.set_next(new_node)
 
     def __str__(self):
         """provides custom string representation of the list"""
@@ -140,13 +163,9 @@ class LinkedList:
 
 if __name__ == "__main__":
     my_list = LinkedList()
-    my_list.add(31)
-    my_list.add(77)
-    my_list.add(17)
-    my_list.add(93)
-    my_list.add(26)
-    my_list.add(54)
-    my_list.add(95)
+    for item in [31, 77, 17, 93, 26, 54, 95]:
+        my_list.add(item)
+
     my_list.remove(31)
     my_list.add(99)
     # print(my_list)
@@ -160,5 +179,7 @@ if __name__ == "__main__":
     print(my_list.pop(3))
     print(my_list.pop(1))
     print(my_list.pop(3))
+    print(my_list)
+    my_list.insert(2, 100)
     print(my_list)
 
