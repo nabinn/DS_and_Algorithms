@@ -2,6 +2,12 @@ from simple_node import Node
 
 
 class LinkedList:
+    """Unordered linked list
+    Nodes are linked together as a chain, each node pointing to
+    the next node in the list.
+    Keeps track of only head (and tail). Other nodes are reached by
+    traversing the link starting at the head.
+    """
     def __init__(self):
         self.head = None
         self.tail = None
