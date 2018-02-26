@@ -1,8 +1,8 @@
-##Given an unsorted array of integers find a pair that add up to a sum.
+## Given an unsorted array of integers find a pair that add up to a sum.
 
 For example,
 
-##Input:
+## Input:
 arr = [4, 9, 8, 7, 2, 1, 5, 6]
 
 sum = 12
