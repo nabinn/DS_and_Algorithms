@@ -1,6 +1,6 @@
 Leetcode prblem: https://leetcode.com/problems/reverse-integer
 
-Given a 32-bit signed integer, reverse digits of an integer.
+Given a 32-bit signed integer, reverse its digits.
 
 ### Examples:
 
@@ -8,12 +8,10 @@ Given a 32-bit signed integer, reverse digits of an integer.
 Input: 3452
 Output: 2543
 ```
----
 ```
 Input: -678
 Output: -876
 ```
----
 ```
 Input:420
 Output: 24
