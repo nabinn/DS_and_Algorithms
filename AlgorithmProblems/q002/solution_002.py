@@ -15,6 +15,7 @@ def reverse(input_num):
 
 
 if __name__ == "__main__":
+    print(reverse(1))
     print(reverse(125))
     print(reverse(-1253))
     print(reverse(120))
