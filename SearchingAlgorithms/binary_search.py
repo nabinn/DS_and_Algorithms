@@ -27,6 +27,7 @@ def binary_search(num_list, item):
 
 
 def recursive_binary_search(num_list, item):
+    """recursively passes the chopped-off list to itself"""
     if len(num_list) == 0:
         return False
     else:
