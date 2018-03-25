@@ -41,7 +41,6 @@ def recursive_binary_search(num_list, item):
                 return recursive_binary_search(num_list[:mid], item)
 
 
-
 if __name__ == "__main__":
     test_list2 = [-34, -8, 0, 23, 50, 56, 78, 100]
     # print(binary_search(test_list2, 23))
