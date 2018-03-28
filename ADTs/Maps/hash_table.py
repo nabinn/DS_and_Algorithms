@@ -99,7 +99,6 @@ class HashTable:
 
 
 if __name__ == "__main__":
-
     H = HashTable()
     H[54] = "cat"
     H[26] = "dog"
@@ -110,12 +109,12 @@ if __name__ == "__main__":
     H[44] = "goat"
     H[55] = "pig"
     H[20] = "chicken"
+    
     print(H.slots)
     print(H.data)
-
     print(H[20])
-
     print(H[17])
+    
     H[20] = 'duck'
     print(H[20])
     print(H[99])
