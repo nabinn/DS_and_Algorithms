@@ -44,7 +44,7 @@ def recursive_binary_search(num_list, item):
 
 def recursive_binary_search_v2(num_list, item):
     """alternate version of recursive binary search.
-    This invokes rec_bin_search() which does the actual work.
+    This invokes the local function rec_bin_search() which does the actual work.
     """
 
     def rec_bin_search(number_list, key, low, high):
