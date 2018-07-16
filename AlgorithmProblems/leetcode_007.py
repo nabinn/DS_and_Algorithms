@@ -2,6 +2,29 @@
 # https://leetcode.com/problems/reverse-integer/description/
 
 
+def reverse_number(x):
+    result = 0
+    is_positive = 1
+
+    # for 32 bit number
+    low = -2 ** 31
+    high = 2 ** 31 - 1
+
+    # for negative number
+    if x < 0:
+        is_positive = -1
+        x = -1 * x
+
+    while x != 0:
+        result = result * 10 + x % 10
+
+        if result > high or result < low:
+            return 0
+        x //= 10
+
+    return result * is_positive
+
+
 def reverse(input_num):
     """
     :type input_num: int
@@ -19,8 +42,8 @@ def reverse(input_num):
 
 
 if __name__ == "__main__":
-    print(reverse(1))
-    print(reverse(125))
-    print(reverse(-1253))
-    print(reverse(120))
-    print(reverse(-120))
+    print(reverse_number(1))
+    print(reverse_number(125))
+    print(reverse_number(-1253))
+    print(reverse_number(120))
+    print(reverse_number(-120))
