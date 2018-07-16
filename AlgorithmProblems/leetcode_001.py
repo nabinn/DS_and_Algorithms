@@ -1,3 +1,7 @@
+# Link to the Problem:
+# https://leetcode.com/problems/two-sum/description/
+
+
 def find_pair_1(integer_array, sum_value):
     """
     Naive Solution:
