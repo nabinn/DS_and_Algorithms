@@ -21,7 +21,7 @@ def find_pair_2(integer_array, sum_value):
     O(n log n) solution using sorting.
 
     Algorithm:
-    1. Sort the array in ascending order. Sorting is O (n log n).
+    1. Sort the array in ascending order. SortingAlgorithms is O (n log n).
     2. Add the elements at start and end of the array.
         If this sum is:
         - equal to required sum, return start and end indices
