@@ -26,6 +26,17 @@ def merge(left_array, right_array):
 
 
 def merge_sort(arr):
+    """
+    :param arr: input array
+    :return: sorted array using merge sort
+
+    Complexity analysis:
+    This has two phases -
+    1. split the array in halves which takes O(log n) time
+    2. merging the sorted array which takes O(n) time
+    Hence, there are log n splits, each of which costs n for a total of n(log n) operations.
+    Thus,it is an O(n log n) algorithm.
+    """
     # base case:
     # if there is only one element return it
     if len(arr) < 2:
