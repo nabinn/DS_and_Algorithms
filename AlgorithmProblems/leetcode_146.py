@@ -8,7 +8,6 @@ class Node:
     The data is stored in key:value format.
     Each node has pointers to the previous and the next nodes.
     """
-
     def __init__(self, key, value):
         self.key = key
         self.value = value
@@ -21,7 +20,7 @@ class LRUCache:
     def __init__(self, capacity):
         """
         :param capacity: the defined capacity of the cache
-
+        ===================================
         This method initializes a doubly linked list with
         two nodes: head and tail, connected to one another.
 
@@ -140,3 +139,4 @@ if __name__ == "__main__":
 
     # This print statement should print: 1 -1 -1 3 4
     print(result1, result2, result3, result4, result5)
+    
