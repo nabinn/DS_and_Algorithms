@@ -3,7 +3,7 @@
 
 
 class ListNode:
-    """Node for a singly linked list"""
+    """Node of a singly linked list"""
     def __init__(self, x):
         self.val = x
         self.next = None
@@ -15,7 +15,6 @@ def addTwoNumbers(l1, l2):
         :type l1: ListNode
         :type l2: ListNode
         :rtype: ListNode
-
         ==========
         Idea:
         1. Push the numbers from the linked lists to stacks
