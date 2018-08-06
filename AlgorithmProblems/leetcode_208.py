@@ -65,4 +65,5 @@ if __name__ == "__main__":
     res3 = trie.startsWith("app")  # returns True
     trie.insert("app")
     res4 = trie.search("app")  # returns True
+    
     print(res1, res2, res3, res4) # should print True False True True
