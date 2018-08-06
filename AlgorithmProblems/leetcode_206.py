@@ -13,14 +13,12 @@ def reverse_linked_list(head):
     """
     :type head: Node (head of input linked list)
     :rtype: Node (head of reversed linked list)
-    ===========================
-
     """
     # if there is no node
     if not head:
         return None
 
-    # if there is one node return it
+    # if there is only one node return it
     if not head.next:
         return head
 
@@ -54,7 +52,6 @@ def create_linked_list(lst):
     """creates a linked list using values in a list
     and returns head node
     """
-
     head = Node(lst[0])
     current = head
 
@@ -67,6 +64,7 @@ def create_linked_list(lst):
 
 def print_linked_list(head):
     """prints a linked list"""
+    
     result = str(head.val)
     current = head
     while current.next:
