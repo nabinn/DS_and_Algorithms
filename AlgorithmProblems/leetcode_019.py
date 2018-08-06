@@ -19,6 +19,8 @@ def remove_nth_node(head, n):
     :return: head of new linked list after removing
             nth node from the end of the list
     ==========================================
+    This solution removes the node in only one pass by using 
+    two pointers- slow and fast. Fast is ahead of the slow by n nodes.
     """
     # slow and fast both start from head
     slow, fast = head, head
