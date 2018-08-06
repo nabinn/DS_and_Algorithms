@@ -1,6 +1,5 @@
 # 341. Flatten Nested List Iterator
 # https://leetcode.com/problems/flatten-nested-list-iterator/description/
-
 # Note:
 # This implementation makes use of interface provided in the question
 # See above link for more information.
