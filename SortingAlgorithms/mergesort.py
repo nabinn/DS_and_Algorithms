@@ -7,6 +7,9 @@ merge sort on both halves.
 Once the two halves are sorted, the fundamental operation, called a merge, is performed.
 Merging is the process of taking two smaller sorted lists and combining them together
 into a single, sorted, new list.
+
+Source:
+http://interactivepython.org/runestone/static/pythonds/SortSearch/TheMergeSort.html
 """
 
 
