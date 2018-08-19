@@ -3,6 +3,9 @@ The bubble sort makes multiple passes through a list.
 It compares adjacent items and exchanges those that are out of order.
 Each pass through the list places the next largest value in its proper place.
 In essence, each item “bubbles” up to the location where it belongs.
+
+Source:
+http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBubbleSort.html
 """
 
 
@@ -11,7 +14,7 @@ def bubble_sort(arr):
     :param arr: an unsorted array
     :return: sorted array
     =========================
-    Time complexity: O(N)
+    Time complexity: O(N2)
     Space complexity: O(1)
     """
     # number of passes = length of the array
