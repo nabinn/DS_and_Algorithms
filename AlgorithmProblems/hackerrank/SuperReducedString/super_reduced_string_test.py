@@ -4,7 +4,7 @@
 # https://www.hackerrank.com/challenges/reduced-string/problem
 
 import unittest
-from super_reduced_string import superReducedString
+from SuperReducedString.super_reduced_string import superReducedString
 
 
 class TestSuperReducedString(unittest.TestCase):
