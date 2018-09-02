@@ -12,6 +12,8 @@ class Node:
 
 def max_depth(root):
     """
+    Recursive algorithm  to find the maximum depth of a binary tree.
+
     :param root: root node of binary tree
     :return: maximum depth of binary tree (int)
     """
