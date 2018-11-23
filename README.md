@@ -1,5 +1,5 @@
 # DS and Algorithms
-Exploring data structures and algorithms in Python.
+Exploring Data Structures and Algorithms in Python.
 
 ## References:
 - [Problem Solving with Algorithms and Data Structures using Python](http://interactivepython.org/runestone/static/pythonds/index.html)
